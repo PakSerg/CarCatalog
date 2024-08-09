@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  database:
+    image: postgres:15-alpine
+    container_name: database
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=CarCatalog
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data 
+
+  backend: 
+    build: . 
+    entrypoint: /entrypoint.sh
+    ports: 
+      - "8000:8000"
+    depends_on:
+      - database
