@@ -5,7 +5,7 @@ while ! nc -z database 5432; do
   sleep 0.5
 done
 echo "Wait a bit..."
-sleep 12
+sleep 5
 echo "PostgreSQL is up!"
 
 python manage.py migrate
