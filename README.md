@@ -71,6 +71,6 @@ http://localhost:8000/redoc/
 ___ 
 Мои контактные данные:
 
-- Telegram: @paksergei
+- Telegram: https://t.me/PakSergeiDev
 - Email: sergey.pak.dev@gmail.com
 - Телефон: +7 (913) 795-65-56
